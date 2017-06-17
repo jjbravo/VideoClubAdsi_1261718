@@ -8,7 +8,7 @@ angular.module('videoClubApp', [
      'ui.router', 
      'ui.bootstrap'
   ])
-.constant("API","http://localhost:25956/adsi2017_completo")
+.constant("API","http://localhost:25956/adsi2017_backend_completo")
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider.otherwise('/');
 

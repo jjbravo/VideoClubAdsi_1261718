@@ -11,6 +11,7 @@ class UsuariosListComponent {
   	this.usuariosService.query().$promise
   	.then(response => {
   		console.log("USUARIOS OK",response);
+      this.usuarios = response;
   	})
   	.catch(err => {
   		console.log("ERROR",err);

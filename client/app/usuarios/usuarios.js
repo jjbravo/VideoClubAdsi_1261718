@@ -10,5 +10,9 @@ angular.module('videoClubApp')
       .state('usuarios-create', {
         url: '/usuarios-create',
         template: '<usuarios-create></usuarios-create>'
+      })
+      .state('usuarios-update', {
+        url: '/usuarios-update/:idUsuario',
+        template: '<usuarios-update></usuarios-update>'
       });
   });
