@@ -8,7 +8,7 @@ class UsuariosCreateComponent {
   }
 
   createUser(){
-  	this.usuariosService.save(this.usuario).$promise
+  	this.usuariosService.createEmpleados(this.usuario).$promise
   	.then(response => {
   		console.log("Usuario registrado correctamente ",response);
   	})
