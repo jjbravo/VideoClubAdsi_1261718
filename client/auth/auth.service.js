@@ -1,3 +1,10 @@
+/*
+* Auth Service es el Service que gestiona el proceso de
+* Longin de la aplicacion
+*/
+
+
+
 'use strict';
 
 function AuthService(){
@@ -6,7 +13,7 @@ function AuthService(){
   };
 
   function login(){
-    
+
   }
 
   return Auth;
