@@ -2,16 +2,20 @@
 
 class NavbarController {
   //start-non-standard
-  menu = [{
-    'title': 'Home',
-    'state': 'main'
-  }];
+  constructor(AuthService){
+    this.AuthService = AuthService;
 
-  isCollapsed = true;
+    this.isCollapsed = true;
+}
   //end-non-standard
 
 
 }
 
 angular.module('videoClubApp')
-  .controller('NavbarController', NavbarController);
+  .component('navbar',{
+    templateUrl:'components/navbar/navbar.html',
+    controller: NavbarController,
+    controllerAs:'vm'
+
+  });

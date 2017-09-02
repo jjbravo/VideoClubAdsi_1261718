@@ -9,7 +9,7 @@ angular.module('videoClubApp', [
      'ui.bootstrap',
 		 "satellizer"
   ])
-.constant("API","http://localhost:25956/adsi2017_backend_completo")
+.constant("API","http://10.72.197.244:25956/adsi2017_backend_completo")
 .config(function($authProvider,API){
 	$authProvider.loginUrl = API+"/api/auth/login";
 	$authProvider.tokenName = "token";
