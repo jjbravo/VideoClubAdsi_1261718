@@ -1,4 +1,6 @@
-<div>This is the usuarios-create view.</div>
+<div class="container">
+	<h2>Create Users</h2>
+
 
 <form name="userForm" ng-submit="vm.createUser()">
 <label for="">Tipo Documento</label>
@@ -12,7 +14,7 @@
 	ng-model="vm.usuario.numDocumento">
 </div>
 
-<div ng-show="vm.showValidaDocumento" class="alert alert-danger" 
+<div ng-show="vm.showValidaDocumento" class="alert alert-danger"
 role="alert">
   <p>El número de documento ya se encuentra registrado</p>
 </div>
@@ -39,3 +41,4 @@ role="alert">
 <button type="submit">Registrar</button>
 
 </form>
+</div>
