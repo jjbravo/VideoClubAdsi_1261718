@@ -4,22 +4,22 @@
 
   class MainController {
 
-    constructor($http) {
-      this.$http = $http;
-      this.awesomeThings = [];
+    constructor() {
+      this.estilos = [
+        "nuevo",
+        "usado"
+      ];
     }
 
     $onInit() {
-      this.$http.get('/api/things')
-        .then(response => {
-          this.awesomeThings = response.data;
-        });
+
     }
   }
 
   angular.module('videoClubApp')
     .component('main', {
       templateUrl: 'app/main/main.html',
-      controller: MainController
+      controller: MainController,
+      controllerAs:'vm'
     });
 })();

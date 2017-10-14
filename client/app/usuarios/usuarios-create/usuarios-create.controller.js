@@ -6,10 +6,13 @@ class UsuariosCreateComponent {
   constructor(usuariosService) {
     this.usuariosService = usuariosService;
     this.showValidaDocumento = false;
+    this.usuario = {
+      numDocumento:null
+    }
   }
 
   createUser(){
-  	this.usuariosService.createEmpleados(this.usuario).$promise
+  	this.usuariosService.save(this.usuario).$promise
   	.then(response => {
   		console.log("Usuario registrado correctamente ",response);
   	})
@@ -20,6 +23,7 @@ class UsuariosCreateComponent {
 
   validarNumDocumento(){
     console.log("NumDocumento",this.usuario.numDocumento);
+
     this.usuariosService.query({numDocumento:this.usuario.numDocumento}).$promise
     .then(response => {
       console.log("Valida ",response);
@@ -35,6 +39,7 @@ class UsuariosCreateComponent {
       console.log("No existe",err);
 
     })
+  
   }
 }
 UsuariosCreateComponent.$inject = ['usuariosService'];

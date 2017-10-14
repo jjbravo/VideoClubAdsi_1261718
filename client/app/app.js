@@ -5,11 +5,12 @@ angular.module('videoClubApp', [
 	 'ngCookies',
 	 'ngResource',
 	 'ngSanitize',
-     'ui.router',
-     'ui.bootstrap',
-		 "satellizer"
+   'ui.router',
+   'ui.bootstrap',
+	 "satellizer",
+	 'ngMessages'
   ])
-.constant("API","http://10.72.197.244:25956/adsi2017_backend_completo")
+.constant("API","http://localhost:25956/adsi2017_backend_completo")
 .config(function($authProvider,API){
 	$authProvider.loginUrl = API+"/api/auth/login";
 	$authProvider.tokenName = "token";
